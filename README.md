@@ -14,5 +14,6 @@ I wrote the assembly code with careful attention to syntax (I'm using neovim wit
 ### Debugging
 This phase was the most difficult for me to get right, but was also the part that I feel I learned the most. I ran into issues with GDB not stopping where I expected, and I had to learn how to properly set breakpoints and use the `watch` command to observe changes to the result variable. I used the `info address result` command to locate the memory address and then watched that address with a `type cast`. It took some trial and error to understand that the program would skip past variable changes if the watchpoint wasn't set beforehand. In the end, I stepped through the instructions, stopping at a specific breakpoint to verify the result with `watch *(int*)` on its memory address.
 
-[Flowchart](docs/constants_variables.drawio.png)
+[Flowchart](docs/constants_variables.drawio.png)  
+
 [GDB-Debugging](docs/gdbDbugging.png)
